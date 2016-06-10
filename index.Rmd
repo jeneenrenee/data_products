@@ -1,0 +1,53 @@
+---
+title       : How Much To Plant In Your Garden
+subtitle    : An Interactive Shiny App
+author      : Jeneen Sommers
+job         : Coursera - Developing Data Products
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow  
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+---
+
+## How many vegetables should you plant in your garden?  
+
+This Shiny app will calculate that for you based on:
+ - How many people you plan to feed from your garden
+ - What kind of vegetables you want to plant
+
+---
+## Why?
+
+This is for a Coursera "Developing Data Products" project.  
+
+---
+
+## Where is the app?
+
+The shiny app can be found at
+
+https://jeneenrenee.shinyapps.io/project/
+
+To estimate how much you need to plant:
+ - Enter how many people will be fed from your garden
+ - Click a box for each vegetable you'd like to plant
+ - The results are displayed interactively in the main panel
+
+---
+## Resources and embedded r code
+
+Numbers for the calculations are based on information from
+
+- http://gardening.about.com/od/vegetable1/a/How-Much-Plant_2.htm
+
+Example:  For 4 people who will eat asparagus:
+```{r}
+  vegetables <- c("asparagus","beets")
+  numbers <- c(10, 3)
+  type <- c("plants", "feet")
+  amt <- as.numeric(numbers[1]) * 4
+  z <- paste(vegetables[1], ":", amt, type[1], "\n")
+  z
+```
